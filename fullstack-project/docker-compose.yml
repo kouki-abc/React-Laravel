@@ -1,0 +1,9 @@
+version: '3.9'
+services:
+  proxy:
+    container_name: fullstack-proxy
+    build: ./docker/nginx
+    ports:
+      - “8000:80"
+    volumes:
+      - ./src:/usr/share/nginx/html
